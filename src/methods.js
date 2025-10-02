@@ -2,6 +2,36 @@
 
 import DataList from './datalist.js';
 
+const dataList = new DataList();
+
+export function addTask(desc) {
+  dataList.addTask(desc);
+}
+
+export function removeTask(id) {
+  dataList.removeTask(id);
+}
+
+export function updateTask(id, desc) {
+  dataList.updateTask(id, desc);
+}
+
+export function toggleComplete(id) {
+  dataList.toggleComplete(id);
+}
+
+export function setEditing(id, editing) {
+  dataList.setEditing(id, editing);
+}
+
+export function clearCompleted() {
+  dataList.clearCompleted();
+}
+
+export function getTasks(filter) {
+  return dataList.getTasks(filter);
+}
+
 // get listed inputs from local storage
 
 export default class display {

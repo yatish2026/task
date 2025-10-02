@@ -1,9 +1,9 @@
-// import _ from 'lodash';
 import './style.css';
+import './interactive.js';
 
 // import from src modules
 import display from './methods.js';
-import Interactive from './interactive.js';
+
 
 const inputList = document.getElementById('inputList');
 const addList = document.getElementById('addList');
@@ -24,3 +24,4 @@ window.addEventListener('load', () => {
 });
 
 display.showLists();
+Interactive();

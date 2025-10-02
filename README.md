@@ -2,14 +2,16 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#In this project we build simple Book list application that can add and remove the Books)
-  - [🛠 Built With](#build-with)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -20,116 +22,127 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [To-do-list-app-interactive] <a name="about-project"></a>
+# 📖 To-do-list-app-interactive <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[To-do-list-app-interactive]** In this project we build simple application that have ability to add and remove books
+**To-do-list-app-interactive** is a simple and modern to-do list application built with vanilla JavaScript, HTML, and CSS. It allows users to add, edit, filter, complete, and remove tasks with a responsive and user-friendly interface.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://www.w3schools.com/html/">HTML</a></li>
-  </ul>
-  <ul>
-    <li><a href="https://reactjs.org/">Javascript</a></li>
-  </ul>
-  <ul>
-    <li><a href="https://reactjs.org/">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+    <li><a href="https://webpack.js.org/">Webpack</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[Used webpack]**
-- **[setup the basic structure of to-do-list-app]**
+- 📝 Add, edit, and remove tasks
+- ✅ Mark tasks as completed or active
+- 🔍 Filter tasks by All, Active, or Completed
+- 🧹 Clear all completed tasks
+- 📱 Responsive and modern UI
+- 💾 Tasks are saved in local storage
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+video: https://youtu.be/WUUn10mEucI
 
 > Add a link to your deployed project.
 
-- [Live Demo Link]()
+- [Live Demo Link](#) <!-- Replace with your live link if available -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-- Browser
-- git
-- code editor
+- Node.js and npm installed
+- A modern web browser
+- Git
 
 ### Setup
 
-To get a local copy up and running follow these simple example steps.
+Clone the repository using:
+```sh
+git clone https://github.com/smartpay-devhub/React-ToDo.git
+cd React-ToDo
+```
 
-- Clone the repository using:
+### Installation
+
+Install the dependencies:
+```sh
+npm install
 ```
-    https://github.com/smartpay-devhub/React-ToDo.git
+
+### Usage
+
+Start the development server:
+```sh
+npm start
 ```
+The app will open in your default browser at `http://localhost:8080/` (or another port if 8080 is in use).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+- GitHub: [@smartpay-devhub](https://github.com/smartpay-devhub)
+- LinkedIn: [Your LinkedIn](#) <!-- Add your LinkedIn if you want -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [Used webpack] **[new_feature_1]**
-- [Created array of objects] **[new_feature_2]**
-- [CSS is loaded by Webpack Style/CSS Loader] **[new_feature_3]**
+- [ ] Drag-and-drop task reordering
+- [ ] Due dates and reminders
+- [ ] Dark mode
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!  
+Feel free to check the [issues page](../../issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project please give me stars rating 
+If you like this project, please give it a star!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
+## 🙏 Acknowledgements <a name="acknowledgements"></a>
 
 - Thanks to the Microverse team for the great curriculum.
 - Thanks to the Code Reviewer(s) for the insightful feedback.
-- A great thanks to My coding partner(s), morning session team, and standup team for their contributions.
-- Hat tip to anyone whose code was used.
+- Thanks to all contributors and open-source authors.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## ❓ FAQ <a name="faq"></a>
+
+- **Can I use this project for my own to-do list?**  
+  Yes! Feel free to fork and customize it.
+
+- **Does it work offline?**  
+  Yes, tasks are stored in your browser's local storage.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

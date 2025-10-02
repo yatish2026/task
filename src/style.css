@@ -7,18 +7,29 @@
 }
 
 body {
-  background-color: rgb(246, 246, 246);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* todolist list base */
 #toDoList {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  max-width: 420px;
   height: auto;
-  margin: 300px auto auto auto;
-  background-color: white;
-  box-shadow: 0 4px 20px 30px rgba(0, 0, 0, 0.137);
+  margin: 2rem 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 72, 88, 0.15);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  gap: 1.2rem;
 }
 
 ::placeholder {
@@ -29,186 +40,188 @@ body {
 
 /* title base */
 .title {
-  background: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-right: 23px;
-  padding-left: 10px;
-  height: 50px;
+  justify-content: space-between;
+  margin-bottom: .5rem;
 }
 
 /* h1 text */
 .ttdl {
   font-family: 'inter', sans-serif;
-  font-size: 15px;
-  font-weight: 100;
-  font-style: normal;
-  padding-top: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin: 0;
 }
 
 /* icon */
-i {
-  border: none;
-  background: none;
-  display: flex;
-  justify-content: flex-end;
+.icon {
+  color: #6366f1;
+  font-size: 1.3rem;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+.icon:hover {
+  transform: rotate(90deg) scale(1.1);
 }
 
 /* task list base */
 #inputList {
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  height: 50px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.inputTask {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  border-left: none;
-  border-bottom: none;
-  border-right: none;
-  border-top: 1px solid gray;
+  gap: 0.5rem;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
   height: 50px;
-  padding: 0 10px;
-}
-
-/* refresh icon */
-.inputTask i {
-  rotate: 90deg;
-  cursor: pointer;
 }
 
 /* input text  */
 #addList {
-  width: 100%;
-  height: 45px;
+  flex: 1;
   border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.5rem 0;
 }
 
 .submiticon {
-  padding: 2px;
+  background: #6366f1;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submiticon:hover {
+  background: #4f46e5;
 }
 
-.remove-edit {
+/* filter buttons */
+.filters {
   display: flex;
-  justify-items: flex-end;
-  margin-left: auto;
-  padding-right: 23px;
-  text-decoration: none;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.filter-btn {
+  background: #f1f5f9;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  color: #6366f1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: #6366f1;
+  color: #fff;
+}
+
+/* task items */
+.toDoListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 0.7rem 0.8rem;
+  gap: 0.7rem;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+  background: #e0e7ff;
+}
+
+.task-checkbox {
+  accent-color: #6366f1;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.task-desc {
+  flex: 1;
+  font-size: 1rem;
+  color: #374151;
+  outline: none;
+  background: transparent;
+  border: none;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.task-desc.editing {
+  background: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #6366f1;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #6366f1;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.2rem 0.3rem;
+  transition: background 0.2s, color 0.2s;
+}
+.action-btn:hover {
+  background: #6366f1;
+  color: #fff;
 }
 
 /* Clear task button */
 #btnClear {
-  height: 50px;
-  color: rgb(147, 147, 147);
-  border-left: none;
-  border-bottom: none;
-  border-right: none;
-  border-top: 1px solid gray;
-  font-size: 18px;
-  font-family: 'inter', sans-serif;
-  cursor: pointer;
-}
-
-/* task list base */
-.list {
-  background: #fff;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  height: 50px;
-  border-top: 1px solid gray;
-  padding-left: 10px;
-  list-style: none;
-}
-
-/* text */
-.tasks label {
-  font-family: 'inter', sans-serif;
-  padding-left: 10px;
-  width: 100%;
-}
-
-/* text */
-.lists li:nth-child(3) {
-  display: flex;
-  justify-items: flex-end;
-  margin-left: auto;
-  padding-right: 15px;
-  text-decoration: none;
-}
-
-/* text checkbox */
-input[type=checkbox]:checked + label {
-  text-decoration: line-through;
-}
-
-/* text */
-input {
-  font-family: 'inter', sans-serif;
-  font-size: 15px;
-  font-style: italic;
-  font-weight: 100;
-}
-
-/* text */
-input:focus {
-  outline: none;
-}
-
-/* text */
-.text {
-  height: 45px;
-  width: 95%;
-  padding-left: 5px;
+  background: #f87171;
+  color: #fff;
   border: none;
-  font-family: 'inter', sans-serif;
-  font-size: 15px;
-}
-
-.textcompleted {
-  text-decoration: line-through;
-  border: none;
-  font-size: 17px;
-  height: 45px;
-  width: 95%;
-  padding-left: 5px;
-  color: #9b9b9b;
-}
-
-/* edit button */
-.edit_list_btn {
+  border-radius: 8px;
+  padding: 0.7rem 0;
+  font-size: 1rem;
   cursor: pointer;
-  border: none;
-  background: none;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+#btnClear:hover {
+  background: #ef4444;
 }
 
-/* remove button */
-.remove_btn {
-  cursor: pointer;
-  display: none;
-  border: none;
-  background: none;
-}
-
-.checkbox {
-  cursor: pointer;
-}
-
-.to-do {
-  background: #fff;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding-left: 10px;
-  list-style: none;
-  border-bottom: 0.01px solid #d3d3d3;
+/* Responsive Design */
+@media (max-width: 600px) {
+  #toDoList {
+    max-width: 98vw;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .ttdl {
+    font-size: 1.1rem;
+  }
+  .task-desc {
+    font-size: 0.95rem;
+  }
 }

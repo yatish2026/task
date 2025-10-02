@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CSSWebpackLoader = require('webpack-loader-css-branch');
 
 module.exports = {
   mode: 'development',
@@ -14,7 +13,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    CSSWebpackLoader
   ],
   output: {
     filename: '[name].bundle.js',
